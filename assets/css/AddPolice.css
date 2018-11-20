@@ -1,0 +1,16 @@
+.form{
+    padding-top: 15px;
+}
+
+.btn{
+    margin-bottom: 30px;
+}
+
+.error {
+    color: red;
+}
+
+.error select {
+    color: red;
+    border-color: red;
+}

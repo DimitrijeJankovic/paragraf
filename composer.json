@@ -1,0 +1,9 @@
+{
+    "name": "dimitrije.jankovic/proekat",
+    "require": {
+        "amstaffix/pagination": "^1.1",
+        "symfony/var-dumper": "^3.3",
+        "phpmailer/phpmailer": "^6.0",
+        "mpdf/mpdf": "^7.1"
+    }
+}
