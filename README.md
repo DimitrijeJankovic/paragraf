@@ -1,5 +1,5 @@
 # test project for https://www.paragraf.rs
-developt on windows 10 using xampp
+developt on windows 10 using xampp, PHP 7.0 and MySql
 
 How to install
 1. clone git rep
