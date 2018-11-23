@@ -5,6 +5,8 @@
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/additional-methods.min.js"></script>
 
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 <script src="<?php echo Configuration::BASE; ?>assets/js/<?php echo $FoundRoute['Controller']; ?>.js"></script>
 </body>
 </html>

@@ -1,4 +1,51 @@
+.h3{
+    padding: 10px 0 0 10px;
+}
+
+i:hover{
+    color: skyblue;
+}
+
 .mid{
-    padding-top: 50px;
+    padding-top: 15px;
     margin: 0 auto;
+    width: 100%;
+}
+
+.btnn{
+    margin-top: 10px;
+    position: absolute; 
+    right: 10px;
+}
+
+.info th{
+    color: gray;
+    font-weight: 400;
+}
+
+table tbody th{
+    cursor: pointer;
+    
+}
+
+.hideExtra{
+    display: none;
+}
+
+#title-users{
+    text-align: center;
+    margin-right: 440px;
+}
+
+.btn-o{
+    font-size: 14px;
+    position: absolute; 
+    margin-top: -40px;
+    right: 410px;
+}
+
+.users{
+    margin: 0 auto;
+    width: 550px;
+    max-width: 550px;
 }

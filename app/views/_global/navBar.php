@@ -4,6 +4,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
+    <!--
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" href="<?php echo Configuration::BASE; ?>">Main</a>
@@ -12,5 +13,6 @@
         <a class="nav-link" href="<?php echo Configuration::BASE; ?>form">Forma</a>
       </li>
     </ul>
+    -->
   </div>
 </nav>

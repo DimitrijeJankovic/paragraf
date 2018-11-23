@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 20, 2018 at 04:59 AM
+-- Generation Time: Nov 23, 2018 at 04:25 AM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -25,51 +25,81 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `policy`
+-- Table structure for table `insured`
 --
 
-CREATE TABLE `policy` (
-  `policy_id` int(11) NOT NULL,
-  `insurance_carrier` varchar(128) NOT NULL,
-  `mobile` varchar(64) NOT NULL,
-  `email` varchar(128) NOT NULL,
-  `starting_date` date NOT NULL,
-  `end_date` date NOT NULL,
-  `name_of_insured` varchar(64) NOT NULL,
-  `surname_of_insured` varchar(64) NOT NULL,
-  `email_of_insured` varchar(128) NOT NULL,
-  `date_of_birth_of_insured` date NOT NULL,
-  `date_created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE `insured` (
+  `insured_id` int(11) NOT NULL,
+  `policie_id` int(11) NOT NULL,
+  `name` varchar(128) NOT NULL,
+  `insured_email` varchar(128) NOT NULL,
+  `born` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `policy`
+-- Dumping data for table `insured`
 --
 
-INSERT INTO `policy` (`policy_id`, `insurance_carrier`, `mobile`, `email`, `starting_date`, `end_date`, `name_of_insured`, `surname_of_insured`, `email_of_insured`, `date_of_birth_of_insured`, `date_created`) VALUES
-(1, 'Dimitrije Jankovic', '+381601479990', 'dimitrije_jankovic@outlook.com', '2018-12-01', '2018-11-08', 'Pera', 'Ivanovic', 'pera@gmail.com', '1994-11-01', '2018-11-19 00:39:06'),
-(2, 'Dragana Lavrnja', '+381601504030', 'dada@gmail.com', '2018-11-07', '2018-11-24', 'Marko ', 'Peric', 'mare@gmail.com', '1992-11-06', '2018-11-19 01:54:14'),
-(15, 'das', '+381601479990', 'a@gmail.com', '2018-02-02', '2018-03-01', 'Dimitrije Jankovic', 'Jankovic', 'ad@s.com', '2018-01-01', '2018-11-20 04:56:41');
+INSERT INTO `insured` (`insured_id`, `policie_id`, `name`, `insured_email`, `born`) VALUES
+(14, 2, 'a a', 'adsa@s.com', '2019-02-01'),
+(15, 2, 'Dika Jankovic', 'dika@gmail.com', '2019-02-01'),
+(16, 2, 'Dada L', 'dl@gmail.com', '2018-02-01');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `policie`
+--
+
+CREATE TABLE `policie` (
+  `policie_id` int(11) NOT NULL,
+  `carrier_of_policy` varchar(128) NOT NULL,
+  `car_mobile` varchar(64) NOT NULL,
+  `car_email` varchar(128) NOT NULL,
+  `starts` date NOT NULL,
+  `ends` date NOT NULL,
+  `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `policie`
+--
+
+INSERT INTO `policie` (`policie_id`, `carrier_of_policy`, `car_mobile`, `car_email`, `starts`, `ends`, `created`) VALUES
+(1, 'Dimitrije Jankovic', '+381601479990', 'dika@gmail.com', '2018-11-01', '2018-11-02', '2018-11-21 22:22:56'),
+(2, 'Dragana Lavrnja', '+381601504030', 'dl@gmail.com', '2018-11-09', '2018-11-17', '2018-11-21 22:29:52');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `policy`
+-- Indexes for table `insured`
 --
-ALTER TABLE `policy`
-  ADD PRIMARY KEY (`policy_id`);
+ALTER TABLE `insured`
+  ADD PRIMARY KEY (`insured_id`);
+
+--
+-- Indexes for table `policie`
+--
+ALTER TABLE `policie`
+  ADD PRIMARY KEY (`policie_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `policy`
+-- AUTO_INCREMENT for table `insured`
 --
-ALTER TABLE `policy`
-  MODIFY `policy_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+ALTER TABLE `insured`
+  MODIFY `insured_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `policie`
+--
+ALTER TABLE `policie`
+  MODIFY `policie_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

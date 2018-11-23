@@ -18,7 +18,6 @@
         const MAIL_HOST = 'smtp.office365.com';
         const MAIL_PORT = '587';
         const MAIL_PROTOCOL = 'tls';
-        const MAIL_USERNAME = 'diitrije.jankovic.13@singimail.rs';
-        const MAIL_PASSWORD = 'Umbilicus123'; // for testing
-        
+        const MAIL_USERNAME = 'testmail@gmail.com';
+        const MAIL_PASSWORD = 'email-test-password';        
     }
